@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LinkedIn Background</title>
   <style>
+    :root {
+      --accent-color: rgb(0, 77, 140);
+    }
     body {
       margin: 0 auto;
       max-width: 1584px;
@@ -19,12 +22,53 @@
     img {
       display: block;
     }
+    .text-col {
+      display: flex;
+      gap: .5rem;
+      flex-direction: column;
+      flex-basis: auto;
+      flex-grow: 1;
+      align-items: end;
+      justify-content: end;
+      padding-right: 1.5rem;
+      padding-bottom: 1rem;
+
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+      background-color: #eee;
+      background: radial-gradient(circle 180px at top right,
+        var(--accent-color),
+        #eee
+      );
+      
+    }
+    .name {
+      font-size: 4.75rem;
+      font-weight: 700;
+      letter-spacing: -4px;
+      color: var(--accent-color);
+    }
+    .title {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      background-color: var(--accent-color);
+      color: #eee;
+      border-radius: 2rem/50%;
+      padding: .5rem 6rem;
+    }
+    .web {
+      font-size: 2.25rem;
+    }
   </style>
 </head>
 <body>
   <div class="li-bg">
     <img src="./ReactTypescript.jpg" />
-    <div>Test</div>
+    <div class="text-col">
+      <div class="name">Daniel Burkhardt</div>
+      <div class="title">Software Engineer</div>
+      <div class="web">https://dan-mba.github.io</div>
+    </div>
   </div>
 </body>
 </html>
